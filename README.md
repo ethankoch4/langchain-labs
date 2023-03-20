@@ -1,2 +1,2 @@
 # langchain-labs
-Help users become familiar with Langchain: https://langchain.readthedocs.io/en/latest/
+Help users become familiar with [Langchain](https://langchain.readthedocs.io/en/latest/)
