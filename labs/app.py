@@ -393,6 +393,7 @@ def _was_input_text_ai(outputs: dict) -> bool:
 def human_or_ai():
     st.title("Human or AI?")
 
+    total_runs = st.slider("How many times should the AI be run?", min_value=1, max_value=10, value=3, step=1)
     text_in_question = st.text_area("Please input some text here.", max_chars=2_500)
     run = st.button("Run")
 
@@ -405,7 +406,6 @@ def human_or_ai():
         st.session_state = {"text_in_question": text_in_question}
 
     counts_for_ai = 0
-    total_runs = 3
     with st.spinner("Generating predictions . . ."):
         for i in range(total_runs):
             with st.spinner(f"Generating prediction {i+1} . . ."):
